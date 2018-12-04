@@ -201,49 +201,6 @@ client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("EPIC","اسم الرتبه"));
     });
 
-client.on('message', message => {
-var prefix = "$";
-       if(message.content === prefix + "hide") {
-                           if(!message.channel.guild) return message.reply(' This command only for servers');
-
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
-              message.channel.overwritePermissions(message.guild.id, {
-            READ_MESSAGES: false
-
-              }).then(() => {
-                  message.reply("تم احفاء الشات :white_check_mark: ")
-              });
-                }
-
-    if(message.content === prefix + "show") {
-                        if(!message.channel.guild) return message.reply(' This command only for servers');
-
-   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
-              message.channel.overwritePermissions(message.guild.id, {
-            READ_MESSAGES: true
-
-              }).then(() => {
-                  message.reply("تم اضهار الشات:white_check_mark:")
-              });
-    }
-
-});
-
-client.on('message', function(message) {
-    if (message.channel.type === "dm") {
-        if (message.author.id === client.user.id) return;
-        var RaYaN= new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTimestamp()
-        .setTitle('New Message in private')
-        .setThumbnail(${message.author.avatarURL})
-        .setDescription(\n\n\``${message.content}```)
-        .setFooter(From ${message.author.tag} (${message.author.id})`)
-    client.channels.get("519442269103980544").send({embed:RaYaN});
-    }
-});
-
-
 
 client.on('ready', () => {
    console.log(`----------------`);
