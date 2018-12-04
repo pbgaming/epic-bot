@@ -211,7 +211,7 @@ var prefix = "$";
             READ_MESSAGES: false
 
               }).then(() => {
-                  message.reply("تم احفاء الشات :white_check_mark: ")
+                  message.reply("تم اخفاء الشات :white_check_mark: ")
               });
                 }
 
@@ -223,7 +223,7 @@ var prefix = "$";
             READ_MESSAGES: true
 
               }).then(() => {
-                  message.reply("تم اضهار الشات:white_check_mark:")
+                  message.reply("تم اظهار الشات:white_check_mark:")
               });
     }
 
