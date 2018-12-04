@@ -201,6 +201,33 @@ client.on('guildMemberAdd', member=> {
     member.addRole(member.guild.roles.find("EPIC","اسم الرتبه"));
     });
 
+client.on('message', message => {
+var prefix = "$";
+       if(message.content === prefix + "hide") {
+                           if(!message.channel.guild) return message.reply(' This command only for servers');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
+              message.channel.overwritePermissions(message.guild.id, {
+            READ_MESSAGES: false
+
+              }).then(() => {
+                  message.reply("تم احفاء الشات :white_check_mark: ")
+              });
+                }
+
+    if(message.content === prefix + "show") {
+                        if(!message.channel.guild) return message.reply(' This command only for servers');
+
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
+              message.channel.overwritePermissions(message.guild.id, {
+            READ_MESSAGES: true
+
+              }).then(() => {
+                  message.reply("تم اضهار الشات:white_check_mark:")
+              });
+    }
+
+});
 
 client.on('ready', () => {
    console.log(`----------------`);
