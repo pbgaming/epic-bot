@@ -256,7 +256,8 @@ const cool = [];
 hero.on('message',async message => {
   if(message.author.bot) return;
   if(message.channel.type === 'dm') return;
- 
+   var prefix = '$';
+
   const args = message.content.split(' ');
   const credits = require('./credits.json');
   const path = './credits.json';
