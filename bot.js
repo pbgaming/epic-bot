@@ -102,6 +102,23 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'باك') {
+    msg.reply('ولكم');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'هلا') {
+    msg.reply('هلا');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'اهلا') {
+    msg.reply('اهلا وسهلا');
+  }
+});
 
 client.on('message', message => {
 var prefix = "$";
