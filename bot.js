@@ -277,6 +277,7 @@ client.on('message', message => {
 
 if(command == "draw") {
     var Canvas = require('canvas')
+  var prefix = "$"
   , Image = new Canvas.Image
   , canvas = new Canvas(450, 170)
   , ctx = canvas.getContext('2d');
