@@ -267,19 +267,23 @@ client.on('message', message => {
     }
 });
 
-client.on("message", message => {
-    if (message.content === (prefix + "help")) {
-    message.channel.send("تم الارسال بلخاص")
-     const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(**
-الاوامر
-   **)
-   message.author.sendEmbed(embed)
-
-   }
-   });
+client.on('message', message => {
+ var prefix = "$";
+    if (message.content === 'help') {
+        let helpEmbed = new Discord.RichEmbed()
+        .setTitle('**أوامر الميوزك...**')
+        .setDescription('**برفكس البوت ($)**')
+        .addField('all', 'برودكاست')
+        .addField('epicbc', 'برودكاست')
+        .addField('close - $open', 'فتح الروم و قفلها')
+        .addField('hide - show', 'اظهار و اخفاء الروم')
+        .addField('report @User reason', ' ريبورت')
+        .addField('new', 'تيكت')
+        .addField('say', 'البوت يقول اللى انت عايزه')
+       
+      message.channel.send(helpEmbed);
+    }
+});
 
 client.on('ready', () => {
    console.log(`----------------`);
