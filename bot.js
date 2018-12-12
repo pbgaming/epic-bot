@@ -268,7 +268,6 @@ client.on('message', message => {
 });
 
 client.on("message", message => {
-  var prefix = '$';
     if (message.content === (prefix + "help")) {
     message.channel.send("تم الارسال بلخاص")
      const embed = new Discord.RichEmbed() 
