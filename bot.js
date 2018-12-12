@@ -275,14 +275,7 @@ client.on("message", message => {
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
          .setDescription(**
-$all برودكاست
-$epicbc  برودكاست
-$close - $open  فتح الروم و قفلها
-$hide - show اظهار و اخفاء الروم
-$clear  مسح
-$report @User reason  ريبورت
-$new تيكت
-$say البوت يقول اللى انت عايزه
+الاوامر
    **)
    message.author.sendEmbed(embed)
 
