@@ -267,23 +267,7 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
- var prefix = "$";
-    if (message.content === 'help') {
-        let helpEmbed = new Discord.RichEmbed()
-       .setTitle('**أوامر الادارة...**')
-        .setDescription('**برفكس البوت ($)**')
-        .addField('all', 'برودكاست')
-        .addField('epicbc', 'برودكاست')
-        .addField('close - $open', 'فتح الروم و قفلها')
-        .addField('hide - show', 'اظهار و اخفاء الروم')
-        .addField('report @User reason', ' ريبورت')
-        .addField('new', 'تيكت')
-        .addField('say', 'البوت يقول اللى انت عايزه')
 
-      message.channel.send(helpEmbed);
-    }
-});
 
 client.on('ready', () => {
    console.log(`----------------`);
