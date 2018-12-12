@@ -267,39 +267,27 @@ client.on('message', message => {
     }
 });
 
-client.on('message', message => {
-    var prefix = "$" // Codes Server
-    let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
+client.on("message", message => {
+  var prefix = 'pb';
+    if (message.content === (prefix + "help")) {
+    message.channel.send("تم الارسال بلخاص")
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(**
+$all برودكاست
+$epicbc  برودكاست
+$close - $open  فتح الروم و قفلها
+$hide - show اظهار و اخفاء الروم
+$clear  مسح
+$report @User reason  ريبورت
+$new تيكت
+$say البوت يقول اللى انت عايزه
+   **)
+   message.author.sendEmbed(embed)
 
-  let args = message.content.split(" ").slice(1);
-
-
-if(command == "draw") {
-    var Canvas = require('canvas')
-  var prefix = "$"
-  , Image = new Canvas.Image
-  , canvas = new Canvas(450, 170)
-  , ctx = canvas.getContext('2d');
-  ctx.font = '30px Impact';
-  let args = message.content.split(" ").slice(1);
-  
-Image.src = canvas.toBuffer();
-
-    console.log(Image);
-ctx.drawImage(Image, 0, 0, Image.width / 470, Image.height / 170);
-ctx.fillText(args.join("  "),110, 70);
-
-
-ctx.beginPath();
-ctx.lineTo(50, 102);
-ctx.stroke();
-
-message.channel.sendFile(canvas.toBuffer());
-}
-}).on('ready', () => {
-
-});
+   }
+   });
 
 client.on('ready', () => {
    console.log(`----------------`);
