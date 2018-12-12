@@ -271,7 +271,7 @@ client.on('message', message => {
  var prefix = "$";
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**أوامر الادارة...**')
+       .setTitle('**أوامر الادارة...**')
         .setDescription('**برفكس البوت ($)**')
         .addField('all', 'برودكاست')
         .addField('epicbc', 'برودكاست')
@@ -280,7 +280,7 @@ client.on('message', message => {
         .addField('report @User reason', ' ريبورت')
         .addField('new', 'تيكت')
         .addField('say', 'البوت يقول اللى انت عايزه')
-       
+
       message.channel.send(helpEmbed);
     }
 });
