@@ -271,7 +271,7 @@ client.on('message', message => {
  var prefix = "$";
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**أوامر الميوزك...**')
+        .setTitle('**أوامر الادارة...**')
         .setDescription('**برفكس البوت ($)**')
         .addField('all', 'برودكاست')
         .addField('epicbc', 'برودكاست')
