@@ -276,7 +276,7 @@ client.on("guildMemberAdd", member => {
 })
 
 client.on('message', message => {
-     if (message.content === "g$bot") {////////////////By:Mal,Team
+     if (message.content === "g!bot") {////////////////By:Mal,Team
      let embed = new Discord.RichEmbed()
   .setColor("RANDOM")////////////////By:Mal,,Team
   .addField("Servers:" , client.guilds.size)
