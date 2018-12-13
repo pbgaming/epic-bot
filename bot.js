@@ -287,6 +287,7 @@ message.channel.sendEmbed(embed);
     }
 });
 
+
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Cyhper Script By : DREAM`);
