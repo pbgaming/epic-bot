@@ -301,6 +301,20 @@ antispam(client, {
   time: 10, // عدد الوقت الي يجلس لين تسحب رتبة الميوت من الشخص الحسبة برمجية وليست كتابية 
 });
 
+client.on('message', message => {
+ var prefix = '$';
+      if(message.author.bot) return;
+if (message.content.startsWith(prefix + 'points')) {
+	if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
+	let userData = points[message.author.id];
+	let embed = new Discord.RichEmbed()
+    .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+	.setColor('#000000')
+	.setDescription(`نقاطك: \`${userData.points}\``)
+	message.channel.sendEmbed(embed)
+  }
+});
+
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Cyhper Script By : DREAM`);
