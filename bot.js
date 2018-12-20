@@ -315,6 +315,45 @@ message.channel.sendEmbed(embed)
 }
 });
 
+client.on('message', message => {
+    if (message.content === "$help") {
+    let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setFooter(`SnOw Code`, 'https://cdn.discordapp.com/attachments/463022063226060813/525273793342734354/abstract-background-with-metallic-rose-gold-texture_1048-7968.jpg')
+  .setColor("#000000")
+  .addField("تم ارسال الهيلب اليك بالخاص")
+  
+  
+  
+  message.channel.sendEmbed(embed);
+  }
+  })
+  
+
+  
+   
+  
+  
+  
+   client.on("message", message => {
+      if (message.content === "$help") {
+       const embed = new Discord.RichEmbed() 
+           .setColor("#FF0000")
+           .setDescription(`**Bot Commands**
+ $all برودكاست
+$epicbc  برودكاست
+$close - $open  فتح الروم و قفلها
+$hide - show اظهار و اخفاء الروم
+$clear  مسح
+$report @User reason  ريبورت
+$new تيكت
+$say البوت يقول اللى انت عايزه
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- `)
+     message.author.sendEmbed(embed)
+     
+     }
+     });
+
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Cyhper Script By : DREAM`);
